@@ -6,39 +6,46 @@ uses Adafruit CircuitPython driver found [here](https://github.com/adafruit/Adaf
 
 ## setup
 
-plug in your SSD1306 to RPi
+1. plug in your SSD1306 to RPi
 
-```
-git clone https://github.com/dbusteed/fun-with-SSD1306
-cd fun-with-SSD1306
-pip3 install adafruit-circuitpython-ssd1306
-```
+2. get the code
+  ```
+  git clone https://github.com/dbusteed/fun-with-SSD1306
+  cd fun-with-SSD1306
+  pip3 install adafruit-circuitpython-ssd1306
+  ```
 
-run each script with
-```
-python3 SCRIPT_NAME.py
-```
+3a. run each script with
+  ```
+  python3 SCRIPT_NAME.py
+  ```
 
-or run them as executables
-```
-chmod +x *.py
-./SCRIPT_NAME.py
-```
+3b. or run them as executables
+  ```
+  chmod +x *.py
+  ./SCRIPT_NAME.py
+  ```
 
 ## contents
 
-`clear.py`
+**`clear.py`**
 
-clears the LED screen
+* clears the LED screen
 
-`game.py`
+**`game.py`**
 
-a "dino-runner" game. hit any key on the keyboard to hop over the incoming obstacles. **NOTE**: the `pynput` module doesn't like it when you run this thru SSH, so you gotta use VNC or run on the RPi directly
+* a "dino-runner" game.
+* hit any key on the keyboard to hop over the incoming obstacles. 
+* **NOTE**: the `pynput` module doesn't like it when you run this thru SSH, so you gotta use VNC or run on the RPi directly
 
-`logger.py`
+**`logger.py`**
 
-prints out messages from a log file. updated in real-time. you can set the log file in the script, then display cool log info automatically
+* prints out messages from a log file.
+* updated in "real-time". 
+* you can set the log file in the script, then display cool log info automatically
 
-`message.py`
+**`message.py`**
 
-write a custom message to the screen. pass in the parameter as a script argument: `python3 message.py "hello everyone!"`
+* write a custom message to the screen. 
+* pass in the parameter as a script argument:
+  * `python3 message.py "hello everyone!"`
